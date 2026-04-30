@@ -1,4 +1,4 @@
-﻿package com.ios.launcher.feature.home
+package com.ios.launcher.feature.home
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -69,6 +69,7 @@ private fun IOSGrid(apps: List<String>, onAppClick: (String) -> Unit) {
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun AppIcon(name: String, onAppClick: (String) -> Unit, modifier: Modifier = Modifier) {
     var pressed by remember { mutableStateOf(false) }
